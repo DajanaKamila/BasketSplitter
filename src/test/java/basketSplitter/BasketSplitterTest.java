@@ -55,7 +55,7 @@ class BasketSplitterTest {
 
 	@Test
 	@DisplayName("split() - Incorrect list of items")
-	void test() {
+	void test_incorrectListOfItemsAsParameterToSplitMethod_returnsMapWithOnlyCorrectProducts()  {
 		List<String> items = new ArrayList<>(List.of("ProductOne", "ProductTwo", "ProductFour"));
 		Set<String> deliverySet = new HashSet<>(new ArrayList<>(List.of("Delivery 2")));
 		

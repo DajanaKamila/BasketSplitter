@@ -34,7 +34,7 @@ public class BasketSplitter {
 	 *           If items list is empty or null, method returns empty map. 
 	 */
 	public Map<String, List<String>> split(List<String> items) {
-		if (items == null || items.isEmpty()) {
+		if (items == null || items.isEmpty() || configMap.isEmpty()) {
 			return optimalDelivery;
 		}
 		Map<String, List<String>> possibleDeliveriesMap = generateMapOfPossibleDeliveries(items);

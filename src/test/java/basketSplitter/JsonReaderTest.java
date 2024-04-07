@@ -39,5 +39,23 @@ class JsonReaderTest {
 		assertEquals(3, result.keySet().size());
 		assertEquals(3, result.values().size());
 	}
+	
+	@Test
+	@DisplayName("jsonMapToFile() - Empty configuration path file")
+	void test_JsonFileToMapMethodWithCorrectInputPathButEmptyFile_ReturnsEmptyMapAndErrorMessage() {
+		String correctPath = "src/test/resources/testEmptyConfig.json";	
+		Map<String, List<String>> result = JsonReader.changeJsonFileToMap(correctPath);
+		
+		ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+	    System.setErr(new PrintStream(outputStream));
+		
+	    JsonReader.changeJsonFileToMap(correctPath);
+	    String errorMessage = outputStream.toString();
+	    
+		assertTrue(result.isEmpty());
+		assertTrue(errorMessage.contains("Error reading JSON file:"));
+		System.setErr(System.err);
+
+	}
 
 }

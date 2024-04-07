@@ -2,6 +2,7 @@ package basket;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -29,6 +30,11 @@ public class JsonReader {
 		} catch (IOException e) {
 			 System.err.println("Error reading JSON file: " + e.getMessage());
 		}
+		
+		if (result == null || result.isEmpty()) {
+			return Collections.emptyMap();
+		}
+		
 		return result;
 	}
 
