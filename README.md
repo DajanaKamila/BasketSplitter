@@ -1,6 +1,6 @@
 # BasketSplitter
 
-BasketSplitter is a Java appliaction designed to handle the division of items between available deliveries based on the available configuration. The goal is to minimize the number of deliveries, and the largest delivery should contain as many products as possible.
+BasketSplitter is a Java library designed to handle the division of items between available deliveries based on the available configuration. The goal is to minimize the number of deliveries, and the largest delivery should contain as many products as possible.
 
 ## Table of Contents
 1. [Description](#description)
@@ -17,7 +17,7 @@ BasketSplitter contains two main classes: `BasketSplitter` and `JsonReader`.
 ## Installation
 To install BasketSplitter:
 1. Download the BasketSplitter.jar file from the repository.
-2. Place the BasketSplitter.jar file in your project directory.
+2. Place the basket-splitter-0.0.1-SNAPSHOT.jar file in your project directory.
 3. Add the jar file to your project's classpath.
 
 ## Configuration
